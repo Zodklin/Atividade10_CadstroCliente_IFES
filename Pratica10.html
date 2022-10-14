@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+</head>
+
+<body>
+    <form method="post" action="/cliente/cadastrar">
+        <h1 style="margin-left:45%">Cadastro de Cliente</h1>
+        <hr style="margin-left:45%; width:300px; opacity:0.5;">
+        <P style="margin-left: 45%;">
+            <label for="txtNome">Nome</label><br>
+            <input type="text" name="NomeCliente" id="txtNome" required placeholder="Seu Nome">
+        </P>
+        <p style="margin-left: 45%;">
+            <label for="emlCliente">E-mail</label><br>
+            <input type="email" name="EmailCliente" id="emlCliente" required placeholder="Email@servidor.com">
+        </p>
+        <p style="margin-left: 45%;">
+            <label for="urlPort">URL Portfolio Online</label><br>
+            <input type="url" name="Portfolio" id="urlPort" required placeholder="http://www.site.com">
+        </p>
+        <p style="margin-left: 45%;">
+            <label for="DtNasc">Data de Nascimento</label><br>
+            <input type="date" name="DataNasc" id="DtNasc" required>
+        </p>
+        <p style="margin-left: 45%;">
+            <label for="nbmDependentes">Qtde Dependentes</label><br>
+            <input type="number" name="NumeroDependentes" id="nmbDependentes" pattern="{2} [0-9]" required placeholder="Esposa, filhos, netos...">
+        </p>
+        <p style="margin-left: 45%;">
+            <label for="ClrPref">Cor Preferida</label><br>
+            <input type="color" name="CorPreferida" id="ClrPref" required>
+        </p>
+        <p style="margin-left: 45%;">
+            <label for="telTelefone">Telefone</label><br>
+            <input type="tel" name="NumeroTelefone" id="txtTelefone" pattern="([0-9]{2}) [0-9]{9}" required
+                placeholder="(00) 000000000">
+        </p>
+        <p style="margin-left: 45%;">
+           <input type="checkbox" name="ReceberPromocoes" id="chkPromocoes">
+           <label for="chkPromocoes">Receber Promoções</label>
+        </p>
+        <p style="margin-left: 45%;">
+            <label>Estado</label><br>
+            <select required>
+                <option value="Slct" hidden>Selecione...</option>
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+            </select>
+        </p>
+        <p  style="margin-left: 45%;">    
+        <label for="txtaBio">Mini-Biografia</label><br>
+        <textarea name="MiniBio" id="txtaBio" cols="30" rows="10"></textarea><br>
+
+        <input type="Submit" value="Enviar">
+    </p>        
+    </form>
+
+</body>
+
+</html>
